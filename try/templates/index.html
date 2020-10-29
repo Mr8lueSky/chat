@@ -1,0 +1,14 @@
+{% load static %}
+<a href="">Прокси на андроид</a>
+<form action="/postmessage/" method="post">
+    {% csrf_token %}
+    <input name='' type='text' >
+    <input type='submit' value='Enter'>
+</form>
+
+{% for message in messages %}
+<div>
+    <h1>{{ message.time }}</h1>
+    <p>{{ message.text }}</p>
+</div>
+{% endfor %}
